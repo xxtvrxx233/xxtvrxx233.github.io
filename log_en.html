@@ -1,0 +1,113 @@
+[System]<br>
+- Updated ColorOS version to 16.0.5
+- Replaced the SSI part with realme GT8 Pro RMX5200_16.0.5.702
+- Removed realme Lab
+- Fixed the issue where CPU usage failed to display correctly in Settings -> About Device -> Performance Booster (Thanks to @SaiChaitanya888)
+- Defaulted to level 2 animations with banner blur to reduce frame drops and improve touch responsiveness (Thanks to @SaiChaitanya888)
+- Initial localization for port Changelog UI and advanced reboot menu
+- Due to the complexity of adding the custom fingerprint icon function from realme Settings to OnePlus Settings app, this function is not available at present (But you can still use the custom fp icons already set in previous version)
+- Other changes
+
+[Kernel]<br>
+- Backported EROFS from Linux 5.10 LTS to 4.19
+(Thanks to @Kakarot, @hsiangkao)
+
+
+## February Update Changelog
+
+- Updated ColorOS version to 16.0.3
+
+- Replaced the SSI part of the port with realme Neo8 version
+
+- Updated stock firmware version to RMX3366_14.0.0.2100(CN01)<br>
+*Users with an unlocked bootloader on the official 14.0.0.2100 build can dirty flash the ported ROM directly while keeping user data now
+
+- Use C16 version Quick Connect app as default <br>
+**OPPO Connect (PC) and iPhone Connect are now work by default; support for Touch Interactions (NFC Share) has been completely dropped**
+
+- Fixed C16 camera watermark issue and use C16 version Camera app as default
+
+- Added XPAN 2.0, though some features may behave abnormally
+
+- Added back the intentionally removed AIPaint feature<br>
+Note: This feature was accidentally released by the official build and was originally intended for February updates
+
+- Attempt to prevent App Market from automatically updating AIUnit app, as well as manual updates by users<br>
+**See [December 19 changelog](https://sourceforge.net/projects/realme-rmx3366-cos15-port/files/ColorOS 16/Archived/) for reasons**
+
+- Removed Starry mode<br>
+This feature only existed on certain older realme devices and is difficult to fix
+
+- Completely removed `GameGpuControlPanel` to prevent soft reboots
+
+- Various minor adjustments and improvements
+
+
+## 1.6 Changelog
+[System]<br>
+
+- Resolved several long-standing legacy issues, detailed as follows:<br>
+  Re-fixed Oplus Camera implementation.<br>
+  Reverted the SELinux Policy changes introduced since C15 port, and corrected SELinux label errors in odm\_file\_contexts.<br>
+ This may resolve some potential environmental issues and fix crashes in newer versions of OcrScanner (Breeno Scanner)<br>
+
+- Completed the missing realme fingerprint icons from the previous release.<br>
+
+- You can now freely mix and match official fingerprint icons and animations within the custom fingerprint icon settings.
+
+- In fact, AI 3D Wallpapers and custom FOD icons can **fully coexist**.
+In previous versions, these features were described as:<br>
+“By default, custom fingerprint icons are unavailable. If the realme Wallpapers app is installed, custom FOD icons are enabled but AI 3D Wallpapers will be disabled.”<br>
+This is actually **not true**.<br>
+If you have **not installed** the realme Wallpapers app, simply keep the current situation.<br>
+If you have **installed** the realme Wallpapers app, please **uninstall updates**, then go to<br>
+Settings → **Password & Security** → Fingerprint → Fingerprint Style<br>
+to directly access realme’s exclusive custom fingerprint icon settings.<br>
+
+- Optimized oplus vrr (Variable Refresh Rate) configuration<br>
+(Thanks to @SaiChaitanya888)<br>
+
+- Replaced the outdated built-in trichromeLib and WebView with newer versions.<br>
+
+- Replaced the OppoPackageInstaller with the AOSP package installer.<br>
+
+- Removed a rarely used filter that could cause the Camera app stuck and crash<br>
+
+[Kernel]<br>
+
+- Potentially fixes occasional lag and flickering at 60 Hz on some devices
+(Thanks to @ermyltsor)
+
+## 16.0.2 Changelog
+- Changed base to OnePlus 15 PLK110\_16.0.2.402(CN01)
+
+- Updated ColorOS version to 16.0.2
+
+- Added AI 3D Wallpaper
+(Settings → Home screen, Lock screen & Style → Wallpapers → Select any wallpaper → Apply to → Lock screen → Style → 3D Wallpaper)
+
+- Fixed crash when using Home Screen drawer Settings
+
+- Added support for forced 120 FPS screen recording
+ (Thanks to @SaiChaitanya888)
+ 
+- Replaced SSI part of the port with  realme GT8 Pro version, adding:
+- Custom FOD icons
+- Translucent Control Center style
+- Directional audio playback feature
+- Background app keep-alive feature<br>
+<del> Custom FOD icons require manually installing the realme Wallpaper app</del><br>
+<del>This will disable the AI 3D Wallpaper feature</del>
+
+- Added realme Lab
+
+- Added Pin to Live Alerts
+
+- Due to my own oversight, some AON features were missing in C1601 port; all of them have now been fully restored
+
+- Fixed an issue where volume could not be adjusted when using USB-C headphones
+
+- Updated Adreno GPU driver to V777 (04/29/24)
+
+- Re-added the realme Aquatic Design theme
+(ColorOS 14/13 style icons, available in Theme Store)
