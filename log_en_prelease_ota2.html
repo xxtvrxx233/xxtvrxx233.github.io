@@ -1,7 +1,19 @@
-[update:https://downloads.sourceforge.net/project/realme-rmx3366-cos15-port/ColorOS 16/Patch/fix_junebuild_softreboot.zip]
-[md5:61a2aa2d1ef9cbd4cfcd4a851c6bd4f2]
-  Patch Update
-(Based on 20260624 Release)
+  August Update
+[System]
+• Attempted to fix unstable dual-SIM behavior
+• Integrated xeu_toolbox, allowing users to freely update the Photos app without worrying about losing the AI Editor feature (thanks to @bruce_teng and Xiaomi.eu)
+• Removed realme UI version property to prevent misidentification by system apps and some 3rd-party apps
+• Moved the DC Dimming option out of realme Lab. It is now located at Settings → Display & Brightness → Low-brightness flicker-free eye comfort
+• Removed ColorOS Lab (realme Lab). Features previously located in Lab have been migrated to the "Extra Features" page in the Software update app. The original Lab entry now redirects to the Software update app's "Extra Features" page
+[Software update app]
+• Added uncrypt support, allowing system updates to be installed without requiring users to decrypt the Data partition
+• Completely rewritten the MainActivity using Jetpack Compose, making it possible to add a second design system
+• Updated the interface and added a new COUI (ColorOS UI) style theme, which can be switched at any time
+• Added Extra Features, including battery / charger / UFS health monitoring, system setting toggles & entries, and shortcuts to hidden system pages
+• Added an About page to display detailed information about the developers and their contributions. Translation contributor(s), previously located in the app settings, have also been moved to the About page
+• The HomePage now displays only the latest version changelog by default. Users can manually expand the list to view previous changelogs
+
+  July Updates
  [System]
 • Fixed abnormal speaker volume curve mapping
 • Fixed transient volume limiter issues in speaker output scenarios
@@ -34,13 +46,6 @@
 • Added Russian language support (thanks to @realdream3r for providing translations)
 • Optimized card and log loading logic
 • Added Easter egg
-
- 5.21 Update
-• Added back realme Lab, and rename realme Lab to ColorOS Lab
-• Added some realme features
-• Some information previously displayed in the "Port ROM Information" page has been moved to the "Version" page
-• Added a new Credits list
-• Attempted to optimize the notification bar's smoothness, but the effect is minimal
 
   5.20 Updates
 • Replaced the SSI part of the port with realme GT8 Pro RMX5200_16.0.7.205(CN01)
@@ -150,4 +155,3 @@ to directly access realme’s exclusive custom fingerprint icon settings.
 • Updated Adreno GPU driver to V777 (04/29/24)
 • Re-added the realme Aquatic Design theme
 (ColorOS 14/13 style icons, available in Theme Store)
-
