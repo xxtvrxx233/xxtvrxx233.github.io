@@ -1,13 +1,42 @@
-[update:https://downloads.sourceforge.net/project/realme-rmx3366-cos15-port/ColorOS%2016/RMX3366_ColorOS16.1_X9U_16.0.8.306_FW2100SP2606_202608051428_xxtvrxx233.zip]
-[md5:497ea26bc6b0a47d17c01401a42e68ae]
+[update:https://downloads.sourceforge.net/project/realme-rmx3366-cos15-port/ColorOS%2016/RMX3366_ColorOS16.1_X9U_16.0.10.501_FW2100SP2608_FINAL_xxtvrxx233.zip]
+[md5:8ea8c71d010b362546f04e4494f419d9]
+ ColorOS 16 Final
+[System]
+• Updated to ColorOS 16.0.10
+• Switched to a single base ROM port while retaining some realme-specific features, which can be found under Settings → Extra Features
+• Due to differences between ColorOS's custom fingerprint icon implementation and realme UI's implementation, you may need to reconfigure your custom fingerprint icons in the new fingerprint icon settings
+• Fixed the issue where the volume could not be adjusted during calls in 3rd-party apps
+• Fixed a crash when using Slow Motion mode in the Camera app
+• Fixed an issue where Moive mode could not be used in the Camera app
+• Fixed an issue that caused some devices to automatically reboot after booting during the 16.0.8 period
+• Fixed the missing AI Wallpaper feature during the 16.0.8 period
+• Fixed the missing 3D Wallpaper feature during the 16.0.8 period
+• Integrated OplusPropsHook framework, allowing users to configure per-app device model spoofing (special thanks to @bruce_teng)
+• By default, the system Wallet app is spoofed as RMX3366 to resolve issues with NFC-related services
+[Kernel]
+• Merged CIP 135 / ST16 security patches
+• Backported BPF from Linux 5.15  (special thanks to @bruce_teng)
+[Software update App]
+• Battery and charging-related status on the Extra Features page is now collapsed by default
+• Under the COUI style, the App Bar and bottom-bar icons have been replaced with COUI-style ones
+• Fixed an issue where the spacing between the Title and Summary of some options was too narrow under the COUI visual style
+• Added an Advanced Features section to the Extra Features page, including system animation controls, original device name/model switching, a toggle for spoofing the Wallet app as the original device model, device spoofing framework configuration, and legacy fingerprint icon settings
+• You can read the background information and explanations for each feature directly in its corresponding settings interface
+[Known Issues — Not Yet Fixed]
+• Camera filters and zoom are unavailable in Night mode
+• Camera filters and zoom are unavailable in Street mode
+• Film filters cannot be used in any Camera mode
+• Filters have no effect in XPAN mode
+• After creating additional App Clones (increasing the number of clones rather than cloning a new app), the system must be rebooted once before the newly created App Clones can be used normally
+
   August Update
 [System]
 • Attempted to fix unstable dual-SIM behavior
 • Integrated xeu_toolbox, allowing users to freely update the Photos app without worrying about losing the AI Editor feature (thanks to @bruce_teng and Xiaomi.eu)
 • Removed realme UI version property to prevent misidentification by system apps and some 3rd-party apps
 • Moved the DC Dimming option out of realme Lab. It is now located at Settings → Display & Brightness → Low-brightness flicker-free eye comfort
-• Removed ColorOS Lab (realme Lab). Features previously located in Lab have been migrated to the "Extra Features" page in the Software update app. The original Lab entry now redirects to the Software update app's "Extra Features" page
-[Software update app]
+• Removed ColorOS Lab (realme Lab). Features previously located in Lab have been migrated to the "Extra Features" page in the Software update App. The original Lab entry now redirects to the Software update App's "Extra Features" page
+[Software update App]
 • Added uncrypt support, allowing system updates to be installed without requiring users to decrypt the Data partition
 • Completely rewritten the MainActivity using Jetpack Compose, making it possible to add a second design system
 • Updated the interface and added a new COUI (ColorOS UI) style theme, which can be switched at any time
@@ -22,7 +51,7 @@
  [Kernel]
 • Added hybridswap support
 • Attempted to prevent unexpected reboots after system hangs
- [Software update app]
+ [Software update App]
 • Updated the interface with a modern Material 3 Expressive design
 • Improved download progress display and interaction experience
 • Rewritten the Settings interface using Jetpack Compose
@@ -37,9 +66,9 @@
 • Due to the new Engineering Mode app being incompatible with older devices, it has been rolled back to version 1607
 [Kernel]
 • Fixed a severe performance degradation issue under low battery conditions
-• Fixed an issue where rebooting into Bootloader via shell, adb or Software update app was not working
+• Fixed an issue where rebooting into Bootloader via shell, adb or Software update App was not working
 • Backported new oplus_sched_assist from OPPO Find X5 (thanks to @SaiChaitanya888)
-[Software update app]
+[Software update App]
 • Redesigned UI using Material Design 3 guidelines
 • Added card animations and loading animations
 • Added local install, supporting users to choose any ROM for installation and supporting ROM file type recognition
